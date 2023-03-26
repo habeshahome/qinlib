@@ -1,19 +1,25 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+export { LeapAutoComplete } from './Components/Inputs/LeapAutoComplete'
+export { LeapTextField } from './Components/Inputs/LeapTextField'
+export { LeapCheckbox } from './Components/Inputs/LeapCheckbox'
+export { LeapRadioGroup } from './Components/Inputs/LeapRadioGroup'
+export { LeapRadio } from './Components/Inputs/LeapRadio';
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+// export { LeapSwitch } from './Components/Inputs/LeapSwitch';
+// export { LeapSlider } from './Components/Inputs/LeapSlider';
+// export { LeapSelect } from './Components/Inputs/LeapSelect';
+// export { LeapToggleButton } from './Components/Inputs/LeapToggleButton';
+// export { LeapToggleButtonGroup } from './Components/Inputs/LeapToggleButtonGroup';
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+export { LeapButton } from './Components/Inputs/LeapButton';
+export { LeapButtonGroup } from './Components/Inputs/LeapButtonGroup';
+
+export { LeapTypography } from './Components/Inputs/LeapTypography';
+
+
+// Data Display
+export { LeapList } from './Components/DataDisplay/LeapList';
+
+/* 
+    Leap Theme Generator
+*/
+export { LeapThemeGenerator } from './generator/index';
