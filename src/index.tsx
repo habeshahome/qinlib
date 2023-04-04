@@ -23,3 +23,5 @@ export { LeapList } from './Components/DataDisplay/LeapList';
     Leap Theme Generator
 */
 export { LeapThemeGenerator } from './generator/index';
+
+export * from '@mui/material'
