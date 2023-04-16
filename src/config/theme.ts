@@ -1,50 +1,58 @@
-import deepmerge  from 'deepmerge';
-import { Theme, createTheme, ThemeOptions } from '@mui/material'
+import deepmerge from 'deepmerge';
+import { Theme } from '@mui/material'
 // import { PaletteAugmentColorOptions } from '@mui/material/styles/createPalette';
-
+import createTheme from '@mui/material/styles/createTheme';
 // src/themes/dark.theme.js
-import { blueGrey, cyan, green } from "@mui/material/colors";
+import { blue, blueGrey, cyan, green, lightGreen, red } from "@mui/material/colors";
+import { PaletteOptions } from '@mui/material/styles/createPalette';
+import { ThemeOptions } from '@mui/material/styles/createTheme';
+const bblTheme = createTheme({
+    mode: 'light',
+    palette: {
+        qintot: red
+    },
+})
 
 export const darkTheme = createTheme({
-  palette: {
-    mode: "light",
-    primary: {
-        main: "#100350",
+    palette: {
+        mode: "light",
+        primary: {
+            main: "#100350",
+        },
+        secondary: {
+            main: '#eabe06',
+        },
+
     },
-    secondary: {
-        main: '#eabe06',
-    },
-    
-  },
-  components: {
-    MuiTextField: {
-        defaultProps: {
-            InputLabelProps: {},
-        }
-    },
-    MuiInputLabel: {
-        defaultProps: {
-            shrink: true,
+    components: {
+        MuiTextField: {
+            defaultProps: {
+                InputLabelProps: {},
+            }
+        },
+        MuiInputLabel: {
+            defaultProps: {
+                shrink: true,
+            }
         }
     }
-  }
 });
 
 export const lightTheme = createTheme({
     palette: {
-      mode: "light",
-      primary: {
-        main: green["500"],
-      },
-      secondary: {
-        main: cyan["500"],
-      },
-      background: {
-        default: blueGrey["500"],
-        paper: blueGrey["500"],
-      },
+        mode: "light",
+        primary: {
+            main: green["500"],
+        },
+        secondary: {
+            main: cyan["500"],
+        },
+        background: {
+            default: blueGrey["500"],
+            paper: blueGrey["500"],
+        },
     },
-  });
+});
 
 /**
  * Generate a theme base on the options received.
@@ -53,7 +61,7 @@ export const lightTheme = createTheme({
  * @returns A complete, ready-to-use theme object.
  */
 export default function leapThemeBuilder(options?: ThemeOptions, ...args: object[]): Theme {
- 
+
     const finalOptions: ThemeOptions = deepmerge(options = {}, {})
     return createTheme(finalOptions, ...args)
 }

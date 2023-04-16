@@ -1,8 +1,10 @@
 import React from "react";
 import { DecoratorFn } from "@storybook/react";
 import { CssBaseline, ThemeProvider } from "@mui/material";
-import { darkTheme, lightTheme as themeOneTheme } from '../src/config/theme'
+import { darkTheme, lightTheme } from '../src/config/theme'
 import { useMemo } from "react";
+import { createTheme } from '@mui/material/styles'
+import { green } from '@mui/material/colors'
 /** fonts for MUI */
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
@@ -21,26 +23,27 @@ export const parameters = {
   },
 }
 
+const qintotTheme = createTheme({palette: { primary: green }})
 
 export const globalTypes = {
   theme: {
     name: "Theme",
     title: "Theme",
     description: "Global theme for components",
-    defaultValue: "themeOne",
+    defaultValue: "qintot",
     toolbar: {
       icon: "paintbrush",
       dynamicTitle: true,
       items: [
         { 
-          value: "themeOne", 
+          value: "qintot", 
           left: "☀️", 
-          title: "Emirates NBD Theme" 
+          title: "qintot" 
         },
         { 
           value: "dark", 
           left: "🌙", 
-          title: "Emirates Islamic Theme" 
+          title: "website" 
         },
       ],
     },
@@ -50,7 +53,7 @@ export const globalTypes = {
 // Add your theme configurations to an object that you can
 // pull your desired theme from.
 const THEMES = {
-  themeOne: themeOneTheme,
+  qintot: qintotTheme,
   dark: darkTheme,
 };
 
@@ -60,7 +63,7 @@ export const withMuiTheme: DecoratorFn = (Story, context) => {
   const { theme: themeKey } = context.globals;
 
   // only recompute the theme if the themeKey changes
-  const theme = useMemo(() => THEMES[themeKey] || THEMES["themeOne"], [themeKey]);
+  const theme = useMemo(() => THEMES[themeKey] || THEMES["qintot"], [themeKey]);
 
   return (
     <ThemeProvider theme={theme}>

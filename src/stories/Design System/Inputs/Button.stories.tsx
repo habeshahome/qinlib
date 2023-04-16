@@ -21,3 +21,9 @@ SecondaryButton.args = {
     variant: 'contained',
     color: 'secondary',
 }
+
+export const QintotButton = Template.bind({})
+QintotButton.args = {
+    variant: 'contained',
+    color: 'qintot',
+}
