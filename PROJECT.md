@@ -42,8 +42,11 @@ This epic includes tasks related to allowing customization of the custom compone
 #### Documentation: 
 This epic includes tasks related to creating documentation for the custom component library, including usage instructions and examples.
 
-#### Testing: This epic includes tasks related to implementing tests to ensure that the custom components are functioning as expected.
+#### Testing: 
+This epic includes tasks related to implementing tests to ensure that the custom components are functioning as expected.
 
-#### Build and publishing: This epic includes tasks related to setting up a build process to generate distributable files for the custom component library and publishing the library to a package registry.
+#### Build and publishing: 
+This epic includes tasks related to setting up a build process to generate distributable files for the custom component library and publishing the library to a package registry.
 
-#### Maintenance and support: This epic includes tasks related to providing ongoing support and maintenance for the custom component library, including bug fixes and updates.
+#### Maintenance and support: 
+This epic includes tasks related to providing ongoing support and maintenance for the custom component library, including bug fixes and updates.
